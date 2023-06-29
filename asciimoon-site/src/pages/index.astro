@@ -6,7 +6,24 @@ import AsciiMoon from "../components/AsciiMoon.astro";
 
 <Layout title="ASCII ☾ MOON">
 	<main>
-		<p class="text-7xl bg-[aqua] p-4 font-semibold">ASCII ☾ MOON</p>
+		<p class="text-3xl xl:text-5xl 2xl:text-7xl bg-[aqua] p-2 font-bold">
+			ASCII ☾ MOON
+		</p>
+		<section class="p-8 border-b-2 border-[aqua]">
+			<div
+				class="grid grid-cols-5 text-[aqua] max-w-md mx-auto text-xs sm:text-sm text-center"
+			>
+				<button class="hover:underline">
+					{"<< Day"}
+				</button>
+				<span>|</span>
+				<button class="hover:underline"> Today</button>
+				<span>|</span>
+				<button class="hover:underline">
+					{"Day >>"}
+				</button>
+			</div>
+		</section>
 		<AsciiMoon />
 		<!-- <Card
 				href="https://docs.astro.build/"
