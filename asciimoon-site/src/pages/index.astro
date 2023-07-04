@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-// import Card from '../components/Card.astro';
 import AsciiMoon from "../components/AsciiMoon.astro";
 ---
 
@@ -9,7 +8,7 @@ import AsciiMoon from "../components/AsciiMoon.astro";
 		<p class="text-3xl xl:text-5xl 2xl:text-7xl bg-[aqua] p-2 font-bold">
 			ASCII ☾ MOON
 		</p>
-		<section class="p-8 border-b-2 border-[aqua]">
+		<section class="p-4 border-b-2 border-[aqua]">
 			<div
 				class="grid grid-cols-5 text-[aqua] max-w-md mx-auto text-xs sm:text-sm text-center"
 			>
@@ -25,17 +24,16 @@ import AsciiMoon from "../components/AsciiMoon.astro";
 			</div>
 		</section>
 		<AsciiMoon />
-		<section
-			class="border-t-2 border-[aqua]"
-		>
-		<div class="place-items-center grid grid-cols-2 max-w-xs text-[aqua] absolute left-4 bottom-4">
-
-			<img src="moon.png" alt="" class="float-left p-4" /><p
-				class="text-xs sm:text-sm"
+		<section>
+			<div
+				class="place-items-center grid grid-cols-2 max-w-xs text-[aqua] absolute left-4 bottom-4"
 			>
-				ASCII ☾ MOON
-			</p>
-		</div>
+				<img src="moon.png" alt="" class="float-left p-4" /><p
+					class="text-xs sm:text-sm"
+				>
+					ASCII ☾ MOON
+				</p>
+			</div>
 		</section>
 	</main>
 
