@@ -1,0 +1,40 @@
+---
+const load_moon_phases = async (obj) => {
+    const gets = [];
+    for (let i in obj) {
+        gets.push(i + "=" + encodeURIComponent(obj[i]));
+    }
+    gets.push("LDZ=" + new Date(obj.year, obj.month - 1, 1).getTime() / 1000);
+    const url = "https://www.icalendar37.net/lunar/api/?" + gets.join("&");
+
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            const data = await response.json();
+            return data;
+        } else {
+            console.error(`HTTP error! status: ${response.status}`);
+        }
+    } catch (error) {
+        console.error("Fetch error: ", error);
+    }
+};
+
+let currentYear = new Date().getFullYear();
+let currentMonth = new Date().getMonth() + 1;
+let day = new Date().getDate();
+
+let moonData = await load_moon_phases({
+    year: currentYear,
+    month: currentMonth,
+});
+let moonPhaseData = moonData?.phase[day];
+---
+
+<div class="text-center text-white">
+    <p>{day}/{currentMonth}/{currentYear}</p>
+    <p>Day of the Week: {moonPhaseData?.dayWeek}</p>
+    <p>Phase Name: {moonPhaseData?.phaseName}</p>
+    <p>Moon Lighting: {moonPhaseData?.lighting}%</p>
+</div>
+

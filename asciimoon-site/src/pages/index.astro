@@ -1,13 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import AsciiMoon from "../components/AsciiMoon.astro";
+import TestAPI from "../components/TestAPI.astro";
 ---
 
 <Layout title="ASCII ☾ MOON">
 	<main>
-		<p class="text-3xl bg-[aqua] p-2 font-bold">
-			ASCII ☾ MOON
-		</p>
+		<p class="text-3xl bg-[aqua] p-2 font-bold">ASCII ☾ MOON</p>
 		<section class="p-4 border-b-2 border-[aqua]">
 			<div
 				class="grid grid-cols-5 text-[aqua] max-w-md mx-auto text-xs sm:text-sm text-center"
@@ -24,6 +23,8 @@ import AsciiMoon from "../components/AsciiMoon.astro";
 			</div>
 		</section>
 		<AsciiMoon />
+		<TestAPI />
+
 		<section>
 			<div
 				class="place-items-center grid grid-cols-2 max-w-xs text-[aqua] absolute left-4 bottom-4"
